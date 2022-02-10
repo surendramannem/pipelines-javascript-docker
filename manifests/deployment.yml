@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: surendramannempipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: surendramannempipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: surendramannempipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: surendramannempipelinesjavascriptdocker 
+          image: mycontainerregistry345.azurecr.io/surendramannempipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
